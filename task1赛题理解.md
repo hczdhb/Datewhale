@@ -52,6 +52,23 @@ Score=编码识别正确的数量/测试集图片数量
 **解决办法** ：转换定长字符识别。可以将赛题抽象为一个定长字符识别问题，在赛题数据集中大部分图像中字符个数为2-4个，最多的字符 个数为6个。
 因此可以对于所有的图像都抽象为6个字符的识别问题，字符23填充为23XXXX，字符231填充为231XXX。
 
+![23xxxxxx](https://user-images.githubusercontent.com/55572398/82408651-a1e6f700-9a9e-11ea-9d5a-fd477be994ef.png)
+
+经过填充之后，原始的赛题可以简化了6个字符的分类问题。在每个字符的分类中会进行11个类别的分类（0—9&空）
+
+分类思路：目标检测。识别图片中所有的字符位置并画出目标框，再识别出目标框中的字符
+
+
+<img width="320" alt="检测" src="https://user-images.githubusercontent.com/55572398/82408657-a3182400-9a9e-11ea-8fc0-9443a9a610e2.png">
+
+可用目标检测模型：SSD，YOLO，R—CNN
+
+**参考论文**：
+- YOLO：https://arxiv.org/abs/1506.02640
+- YOLOv3：https://arxiv.org/abs/1804.02767
+- SSD：https://arxiv.org/abs/1512.02325
+- RCNN：https://github.com/facebookresearch/Detectron
+
 
 
 
