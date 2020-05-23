@@ -20,6 +20,31 @@ Pillow是Python图像处理函式库(PIL）的一个分支。
 * 注意点： 有的图片模式可能是其他的 ，如：'p', 'L', 'RGBA' ,需要利用convert方法转换图片的模式，变成mode='RGB',然后才能保存为jepg格式的图片
 
 ### OpenCv
+| 效果 | 代码 |
+| ------------- | ------------- |
+| <img width="548" alt="截屏2020-05-23 下午8 31 26" src="https://user-images.githubusercontent.com/55572398/82730711-67968780-9d34-11ea-8cf9-ecbe47b03fbd.png"> |<img width="471" alt="截屏2020-05-23 下午8 40 31" src="https://user-images.githubusercontent.com/55572398/82730936-1ab3b080-9d36-11ea-93b1-48674ea5a594.png"> |
+| <img width="528" alt="截屏2020-05-23 下午8 06 15" src="https://user-images.githubusercontent.com/55572398/82730712-68c7b480-9d34-11ea-889c-a1b54aa58693.png"> | <img width="343" alt="截屏2020-05-23 下午8 41 50" src="https://user-images.githubusercontent.com/55572398/82730940-20a99180-9d36-11ea-8ca4-29a8d38dbb9a.png"> |
+| <img width="534" alt="截屏2020-05-23 下午8 28 28" src="https://user-images.githubusercontent.com/55572398/82730713-69f8e180-9d34-11ea-9c34-0d117ad6b8d8.png">|<img width="313" alt="截屏2020-05-23 下午8 41 14" src="https://user-images.githubusercontent.com/55572398/82730943-22735500-9d36-11ea-9a0a-e416d5a557bf.png">
 
+### 数据扩增方法
+当你训练一个机器学习mode时候，你真正做的就是调参以便它能将输入（比如图片）映射到输出（比如标签）。我们优化目标是追求我们模型损失较低的最佳点，当参数以正确的方式调整时就会发生这种情况。
+最领先的神经网络有着数百万的参数！
+显然，如果你有很多参数，你需要给你的模型足够比例的样本。同样，你需要的参数的个数与你任务的复杂度成比例。
 
+- 有哪些数据扩增方法
+数据扩增方法有很多：从颜色空间、尺度空间到样本空间，同时根据不同任务数据扩增都有相应的区别。
+对于图像分类，数据扩增一般不会改变标签；对于物体检测，数据扩增会改变物体坐标位置；对于图像分割，数据扩增会改变像素标签。
+在常见的数据扩增方法中，一般会从图像颜色、尺寸、形态、空间和像素等角度进行变换。当然不同的数据扩增方法可以自由进行组合，得到更加丰富的数据扩增方法。
 
+以torchvision为例，常见的数据扩增方法包括：
+
+- transforms.CenterCrop 对图片中心进行裁剪
+- transforms.ColorJitter 对图像颜色的对比度、饱和度和零度进行变换
+- transforms.FiveCrop 对图像四个角和中心进行裁剪得到五分图像
+- transforms.Grayscale 对图像进行灰度变换
+- transforms.Pad 使用固定值进行像素填充
+- transforms.RandomAffine 随机仿射变换
+- transforms.RandomCrop 随机区域裁剪
+- transforms.RandomHorizontalFlip 随机水平翻转
+- transforms.RandomRotation 随机旋转
+- transforms.RandomVerticalFlip 随机垂直翻转
