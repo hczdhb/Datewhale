@@ -55,3 +55,10 @@ Pillow是Python图像处理函式库(PIL）的一个分支。
 
 
 ## Pytorch读取数据
+
+<img width="617" alt="截屏2020-05-23 下午9 01 02" src="https://user-images.githubusercontent.com/55572398/82731334-a6c6d780-9d38-11ea-958d-5f681890e4b8.png">
+
+*有了Dataset为什么还要有DataLoder？其实这两个是两个不同的概念，是为了实现不同的功能*。
+1.Dataset：对数据集的封装，提供索引方式的对数据样本进行读取
+2.DataLoder：对Dataset进行封装，提供批量读取的迭代读取
+
