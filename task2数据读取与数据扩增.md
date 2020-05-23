@@ -58,7 +58,14 @@ Pillow是Python图像处理函式库(PIL）的一个分支。
 
 <img width="617" alt="截屏2020-05-23 下午9 01 02" src="https://user-images.githubusercontent.com/55572398/82731334-a6c6d780-9d38-11ea-958d-5f681890e4b8.png">
 
-*有了Dataset为什么还要有DataLoder？其实这两个是两个不同的概念，是为了实现不同的功能*。
-1.Dataset：对数据集的封装，提供索引方式的对数据样本进行读取
-2.DataLoder：对Dataset进行封装，提供批量读取的迭代读取
+*有了Dataset为什么还要有DataLoder？其实这两个是两个不同的概念，是为了实现不同的功能*
+1. Dataset：对数据集的封装，提供索引方式的对数据样本进行读取
+2. DataLoder：对Dataset进行封装，提供批量读取的迭代读取
+
+<img width="714" alt="截屏2020-05-23 下午9 06 01" src="https://user-images.githubusercontent.com/55572398/82731425-6156da00-9d39-11ea-8487-6066fe7f43de.png">
+
+注：
+在加入DataLoder后，数据按照批次获取，每批次调用Dataset读取单个样本进行拼接。此时data的格式为：
+torch.Size([10, 3, 64, 128]), torch.Size([10, 6])
+前者为图像文件，为batchsize * chanel * height * width次序；后者为字符标签
 
