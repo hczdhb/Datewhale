@@ -14,7 +14,7 @@ Pillow是Python图像处理函式库(PIL）的一个分支。
 
 | 效果 | 代码 |
 | ------------- | ------------- |
-| | Content Cell |
+|![cat](https://user-images.githubusercontent.com/55572398/82728270-edf59e00-9d21-11ea-95bc-f7802e96a41c.jpg)| Content Cell |
 | Content Cell | Content Cell |
 | Content Cell | Content Cell |
 
