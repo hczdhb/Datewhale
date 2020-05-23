@@ -12,4 +12,10 @@
 Pillow是Python图像处理函式库(PIL）的一个分支。
 优点：可以与ipython notebook无缝集成，应用广泛。
 
+| 效果 | 代码 |
+| ------------- | ------------- |
+| | Content Cell |
+| Content Cell | Content Cell |
+| Content Cell | Content Cell |
+
 
