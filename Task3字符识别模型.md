@@ -13,5 +13,8 @@ CNN是一种层次模型，输入的是原始的像素数据。CNN通过卷积�
 <img width="1036" alt="截屏2020-05-26 下午7 16 13" src="https://user-images.githubusercontent.com/55572398/82894619-6b6d1880-9f85-11ea-8106-abcbe627dc94.png">
 
 
+![Le_CNN](https://user-images.githubusercontent.com/55572398/82895175-5e045e00-9f86-11ea-9eba-057c0cfc1bc4.png)
+
+通过多次卷积和池化，CNN的最后一层将输入的图像像素映射为具体的输出。如在分类任务中会转换为不同类别的概率输出，然后计算真实标签与CNN模型的预测结果的差异，并通过反向传播更新每层的参数，并在更新完成后再次前向传播，如此反复直到训练完成 。
 
 
