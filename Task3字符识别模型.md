@@ -24,3 +24,7 @@ CNN是一种层次模型，输入的是原始的像素数据。CNN通过卷积�
 <img width="666" alt="截屏2020-05-26 下午7 40 43" src="https://user-images.githubusercontent.com/55572398/82896756-10d5bb80-9f89-11ea-8782-1a0975ea6356.png">
 
 * 绘制准确率和损失，如下图所示
+
+![2018123016304545](https://user-images.githubusercontent.com/55572398/82897961-0ddbca80-9f8b-11ea-9037-c722b3d68b40.png)
+![20181230163054552](https://user-images.githubusercontent.com/55572398/82897963-0e746100-9f8b-11ea-8843-a297476fae80.png)
+
