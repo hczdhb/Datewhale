@@ -4,3 +4,7 @@
 ![卷积](https://user-images.githubusercontent.com/55572398/82893325-6ad38280-9f83-11ea-83f9-708cd33bcccd.png)
 
 CNN是一种层次模型，输入的是原始的像素数据。CNN通过卷积（convolution）、池化（pooling）、非线性激活函数（non-linear activation function）和全连接层（fully connected layer）构成。
+
+<img width="1151" alt="截屏2020-05-26 下午7 08 53" src="https://user-images.githubusercontent.com/55572398/82894016-825f3b00-9f84-11ea-92e4-d3dfeaceaf65.png">
+
+可以卷积核对应于一个矩阵，其中的参数都是经过训练（学习）出来的，将卷积核中的值和图片中的像素值做点积，就会得到新的矩阵，可以把新的矩阵理解为卷积核提取的图片的特征图（feature map），如下图所示
